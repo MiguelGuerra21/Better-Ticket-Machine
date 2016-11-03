@@ -109,4 +109,18 @@ public class TicketMachine
         total = 0;
         return amountToRefund;
     }
+    /**
+     * Método que vacia la maquina solo si no hay nadie metiendo dinero, sino devuelve -1
+     */
+    public int emptyMachine2()  {
+        if (balance == 0) {
+             int amountToRefund;
+             amountToRefund = balance;
+             balance = 0;
+             return amountToRefund;
+            }
+        else {
+            return -1;
+        }
+}
 }
