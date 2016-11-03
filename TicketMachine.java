@@ -21,6 +21,8 @@ public class TicketMachine
     private int prize;
     //Maximum number of tickets that the machine is allowed to sell before error
     private int maxbilletes;
+    //Contador de cosonas
+    private int contador;
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -31,6 +33,7 @@ public class TicketMachine
         total = 0;
         prize = premium;
         maxbilletes = billetesmaximos;
+        contador = 0;
     }
 
     /**
@@ -72,7 +75,7 @@ public class TicketMachine
      */
     public void printTicket()
     {
-    if (prize == 1) {
+        if (prize == 1) {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
@@ -103,7 +106,11 @@ public class TicketMachine
         }
         else {
             System.out.println ("Error , premium can only be 1(if activated) or 0 (if desactivated)");
-}
+        }
+        if (contador >= maxbilletes) {
+            System.out.println("Billetes ya vendidos,vuelva mas tarde");
+        }
+    contador= contador + 1;
     }
 
     /**
