@@ -111,7 +111,7 @@ public class TicketMachine
             System.out.println("Billetes ya vendidos,vuelva mas tarde");
         }
     contador= contador + 1;
-    }
+}
 
     /**
      * Return the money in the balance.
