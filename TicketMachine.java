@@ -75,7 +75,10 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        if (prize == 1) {
+        if (contador >= maxbilletes) {
+            System.out.println("Billetes ya vendidos,vuelva mas tarde");
+        }
+        else if(prize == 1) {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
@@ -107,9 +110,7 @@ public class TicketMachine
         else {
             System.out.println ("Error , premium can only be 1(if activated) or 0 (if desactivated)");
         }
-        if (contador >= maxbilletes) {
-            System.out.println("Billetes ya vendidos,vuelva mas tarde");
-        }
+
     contador= contador + 1;
 }
 
